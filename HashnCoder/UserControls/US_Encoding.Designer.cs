@@ -50,7 +50,7 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "US_Encoding";
-            this.Size = new System.Drawing.Size(545, 303);
+            this.Size = new System.Drawing.Size(545, 353);
             this.ResumeLayout(false);
 
         }
