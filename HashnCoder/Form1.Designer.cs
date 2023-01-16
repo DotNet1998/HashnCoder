@@ -142,6 +142,7 @@
             // guna2Button1
             // 
             this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.Checked = true;
             this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.guna2Button1.FillColor = System.Drawing.Color.White;
