@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HashnCoder.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,33 @@ namespace HashnCoder
         public Form1()
         {
             InitializeComponent();
+            US_Encoding us = new US_Encoding();
+            addUserControl(us);
+
+        }
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock= DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            US_Encoding us = new US_Encoding();
+            addUserControl(us);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            US_AES us = new US_AES();   
+            addUserControl(us);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            US_Hashing us = new US_Hashing();   
+            addUserControl(us); 
         }
     }
 }
