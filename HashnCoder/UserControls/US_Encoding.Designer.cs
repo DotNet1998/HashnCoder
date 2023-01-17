@@ -160,7 +160,8 @@
             this.copy.Name = "copy";
             this.copy.Size = new System.Drawing.Size(241, 19);
             this.copy.TabIndex = 5;
-            this.copy.Text = "Скопировать текст из буфера обмена";
+            this.copy.Text = "Скопировать текст в буфер обмена";
+            this.copy.Click += new System.EventHandler(this.copy_Click);
             // 
             // guna2Panel4
             // 
@@ -189,7 +190,7 @@
             // vvod
             // 
             this.vvod.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.vvod.DefaultText = "\"Привет\"";
+            this.vvod.DefaultText = "";
             this.vvod.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.vvod.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.vvod.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -234,6 +235,7 @@
             this.paste.Size = new System.Drawing.Size(241, 19);
             this.paste.TabIndex = 5;
             this.paste.Text = "Вставить текст из буфера обмена";
+            this.paste.Click += new System.EventHandler(this.paste_Click);
             // 
             // guna2Panel3
             // 
