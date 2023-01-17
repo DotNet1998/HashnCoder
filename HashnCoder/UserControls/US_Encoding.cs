@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web;
 
 namespace HashnCoder.UserControls
 {
@@ -42,6 +43,25 @@ namespace HashnCoder.UserControls
 
                     res.Text = deText;
                 }
+
+                if (algoritm.Text == "UrlEncode" && encdecode.Text == "Encode")
+                {
+                  res.Text =  HttpUtility.UrlEncode(vvod.Text);             // кодирую текс в UrlEncode
+                }
+
+                if (algoritm.Text == "UrlEncode" && encdecode.Text == "Decode")
+                {
+                    res.Text = HttpUtility.UrlDecode(vvod.Text);
+                }
+
+
+
+
+
+
+
+
+
             }
             catch { }
 
