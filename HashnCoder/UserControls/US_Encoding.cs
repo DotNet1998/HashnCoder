@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
 
+
 namespace HashnCoder.UserControls
 {
     public partial class US_Encoding : UserControl
@@ -19,12 +20,14 @@ namespace HashnCoder.UserControls
             algoritm.Text = "HtmlEncode";
             encdecode.Text = "Encode";
             vvod.Text = "\"Привет\"";
+        
         }
 
         private void encodeGo_Click(object sender, EventArgs e)
         {
             try
             {
+               
                 //Base64
                 if (algoritm.Text == "Base64" && encdecode.Text == "Encode")    // кодирую текст  в Base64
                 {
@@ -66,11 +69,6 @@ namespace HashnCoder.UserControls
                 {
                     res.Text = HttpUtility.HtmlDecode(vvod.Text);        // декодирую  HtmlEncode в текст
                 }
-
-
-
-
-
             }
             catch { }
 
