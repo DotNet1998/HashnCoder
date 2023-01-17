@@ -15,6 +15,36 @@ namespace HashnCoder.UserControls
         public US_Encoding()
         {
             InitializeComponent();
+            algoritm.Text = "Base64";
+            encdecode.Text = "Encode";
+            vvod.Text = "Привет";
+        }
+
+        private void encodeGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (algoritm.Text == "Base64" && encdecode.Text == "Encode")    // кодирую текст  в Base64
+                {
+                    string vvodText = vvod.Text;
+                    var vvodTextByte = Encoding.UTF8.GetBytes(vvodText);
+                    string enText = Convert.ToBase64String(vvodTextByte);
+
+                    res.Text = enText;
+
+                }
+
+                if (algoritm.Text == "Base64" && encdecode.Text == "Decode") // роскодирую текст из Base64 в обычный 
+                {
+                    string enText = vvod.Text;
+                    var enTextBytes = Convert.FromBase64String(enText);
+                    string deText = Encoding.UTF8.GetString(enTextBytes);
+
+                    res.Text = deText;
+                }
+            }
+            catch { }
+
         }
     }
 }
