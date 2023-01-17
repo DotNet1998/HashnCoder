@@ -136,9 +136,9 @@
             "Base64",
             "UrlEncode",
             "HtmlEncode"});
-            this.comboBox3.Location = new System.Drawing.Point(159, 3);
+            this.comboBox3.Location = new System.Drawing.Point(153, 3);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(73, 21);
+            this.comboBox3.Size = new System.Drawing.Size(87, 21);
             this.comboBox3.TabIndex = 4;
             // 
             // guna2HtmlLabel5
@@ -332,9 +332,9 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(159, 5);
+            this.comboBox2.Location = new System.Drawing.Point(153, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(73, 21);
+            this.comboBox2.Size = new System.Drawing.Size(87, 21);
             this.comboBox2.TabIndex = 5;
             // 
             // guna2HtmlLabel2
@@ -366,9 +366,9 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.comboBox1.Location = new System.Drawing.Point(159, 6);
+            this.comboBox1.Location = new System.Drawing.Point(153, 6);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(73, 21);
+            this.comboBox1.Size = new System.Drawing.Size(87, 21);
             this.comboBox1.TabIndex = 4;
             // 
             // guna2HtmlLabel1

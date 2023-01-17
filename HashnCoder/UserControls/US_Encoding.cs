@@ -16,19 +16,20 @@ namespace HashnCoder.UserControls
         public US_Encoding()
         {
             InitializeComponent();
-            algoritm.Text = "Base64";
+            algoritm.Text = "HtmlEncode";
             encdecode.Text = "Encode";
-            vvod.Text = "Привет";
+            
         }
 
         private void encodeGo_Click(object sender, EventArgs e)
         {
             try
             {
+                //Base64
                 if (algoritm.Text == "Base64" && encdecode.Text == "Encode")    // кодирую текст  в Base64
                 {
                     string vvodText = vvod.Text;
-                    var vvodTextByte = Encoding.UTF8.GetBytes(vvodText);
+                    var vvodTextByte = Encoding.UTF8.GetBytes(vvodText); 
                     string enText = Convert.ToBase64String(vvodTextByte);
 
                     res.Text = enText;
@@ -44,19 +45,27 @@ namespace HashnCoder.UserControls
                     res.Text = deText;
                 }
 
-                if (algoritm.Text == "UrlEncode" && encdecode.Text == "Encode")
+                // UrlEncdoe
+                if (algoritm.Text == "UrlEncode" && encdecode.Text == "Encode") 
                 {
                   res.Text =  HttpUtility.UrlEncode(vvod.Text);             // кодирую текс в UrlEncode
                 }
 
                 if (algoritm.Text == "UrlEncode" && encdecode.Text == "Decode")
                 {
-                    res.Text = HttpUtility.UrlDecode(vvod.Text);
+                    res.Text = HttpUtility.UrlDecode(vvod.Text);            // декодирую  UrlEncode в текст
                 }
 
+                // 
+                if (algoritm.Text == "HtmlEncode" && encdecode.Text == "Encode") //  
+                {
+                    res.Text = HttpUtility.HtmlEncode(vvod.Text);
+                }
 
-
-
+                if (algoritm.Text == "HtmlEncode" && encdecode.Text == "Decode")
+                {
+                    res.Text = HttpUtility.HtmlDecode(vvod.Text);
+                }
 
 
 

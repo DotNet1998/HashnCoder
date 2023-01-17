@@ -189,7 +189,7 @@
             // vvod
             // 
             this.vvod.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.vvod.DefaultText = "";
+            this.vvod.DefaultText = "\"Привет\"";
             this.vvod.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.vvod.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.vvod.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -254,7 +254,7 @@
             "Decode"});
             this.encdecode.Location = new System.Drawing.Point(217, 5);
             this.encdecode.Name = "encdecode";
-            this.encdecode.Size = new System.Drawing.Size(73, 21);
+            this.encdecode.Size = new System.Drawing.Size(87, 21);
             this.encdecode.TabIndex = 5;
             // 
             // guna2HtmlLabel2
@@ -289,7 +289,7 @@
             "HtmlEncode"});
             this.algoritm.Location = new System.Drawing.Point(217, 5);
             this.algoritm.Name = "algoritm";
-            this.algoritm.Size = new System.Drawing.Size(73, 21);
+            this.algoritm.Size = new System.Drawing.Size(87, 21);
             this.algoritm.TabIndex = 4;
             // 
             // guna2HtmlLabel1
