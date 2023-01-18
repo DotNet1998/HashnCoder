@@ -22,11 +22,12 @@ namespace HashnCoder.UserControls
     
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+           
             string pass = vvod.Text;
-            res.ScrollBars = ScrollBars.Horizontal;
+            res.ScrollBars = ScrollBars.Horizontal; //добавляю перемотку текста вправ-влево.
 
             MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(pass));
+            byte[] checkSum = md5.ComputeHash(Encoding.UTF8.GetBytes(pass));  //перевожу строку в байт
             res.Text =  $"MD5: {BitConverter.ToString(checkSum).Replace("-", String.Empty).ToLower()}";
 
             SHA1 sh1 = new SHA1CryptoServiceProvider();
@@ -46,6 +47,26 @@ namespace HashnCoder.UserControls
             res.Text += $"\r\nSHA512: {BitConverter.ToString(checkSum).Replace("-", String.Empty).ToLower()}";
         }
 
-       
+        private void guna2Button3_Click(object sender, EventArgs e) //Копировать 
+        {
+            try
+            {
+                Clipboard.SetText(res.Text);
+            }
+            catch { MessageBox.Show("Поле пустое"); }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e) //Вставить
+        {
+            try
+            {
+                if (Clipboard.ContainsText() == true)
+                {
+                    string someText = Clipboard.GetText();
+                    vvod.Text += someText;
+                }
+            }
+            catch { MessageBox.Show("Буфер обмена пуст"); }
+        }
     }
 }

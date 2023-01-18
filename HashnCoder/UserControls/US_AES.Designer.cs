@@ -32,7 +32,7 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.algoritm = new System.Windows.Forms.ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -122,24 +122,23 @@
             // 
             this.guna2Panel8.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel8.BorderThickness = 1;
-            this.guna2Panel8.Controls.Add(this.comboBox3);
+            this.guna2Panel8.Controls.Add(this.algoritm);
             this.guna2Panel8.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel8.Location = new System.Drawing.Point(288, 7);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(245, 27);
             this.guna2Panel8.TabIndex = 5;
             // 
-            // comboBox3
+            // algoritm
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Base64",
-            "UrlEncode",
-            "HtmlEncode"});
-            this.comboBox3.Location = new System.Drawing.Point(153, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(87, 21);
-            this.comboBox3.TabIndex = 4;
+            this.algoritm.FormattingEnabled = true;
+            this.algoritm.Items.AddRange(new object[] {
+            "AES-ECB",
+            "AES-CBC"});
+            this.algoritm.Location = new System.Drawing.Point(153, 3);
+            this.algoritm.Name = "algoritm";
+            this.algoritm.Size = new System.Drawing.Size(87, 21);
+            this.algoritm.TabIndex = 4;
             // 
             // guna2HtmlLabel5
             // 
@@ -332,6 +331,8 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "128"});
             this.comboBox2.Location = new System.Drawing.Point(153, 5);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(87, 21);
@@ -425,7 +426,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox algoritm;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
     }

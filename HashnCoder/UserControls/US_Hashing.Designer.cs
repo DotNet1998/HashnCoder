@@ -32,6 +32,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.res = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -39,7 +40,6 @@
             this.vvod = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.res = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
@@ -102,6 +102,30 @@
             this.guna2HtmlLabel4.TabIndex = 7;
             this.guna2HtmlLabel4.Text = "Результат: ";
             // 
+            // res
+            // 
+            this.res.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.res.DefaultText = "";
+            this.res.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.res.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.res.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.res.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.res.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.res.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.res.ForeColor = System.Drawing.Color.Black;
+            this.res.HoverState.BorderColor = System.Drawing.Color.LightGray;
+            this.res.Location = new System.Drawing.Point(8, 20);
+            this.res.Multiline = true;
+            this.res.Name = "res";
+            this.res.PasswordChar = '\0';
+            this.res.PlaceholderText = "";
+            this.res.ReadOnly = true;
+            this.res.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.res.SelectedText = "";
+            this.res.Size = new System.Drawing.Size(241, 223);
+            this.res.TabIndex = 6;
+            this.res.WordWrap = false;
+            // 
             // guna2Panel7
             // 
             this.guna2Panel7.BorderColor = System.Drawing.Color.Silver;
@@ -129,6 +153,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(241, 19);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Скопировать текст из буфера обмена";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Panel4
             // 
@@ -202,30 +227,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(241, 19);
             this.guna2Button2.TabIndex = 5;
             this.guna2Button2.Text = "Вставить текст из буфера обмена";
-            // 
-            // res
-            // 
-            this.res.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.res.DefaultText = "";
-            this.res.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.res.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.res.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.res.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.res.FocusedState.BorderColor = System.Drawing.Color.Silver;
-            this.res.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.res.ForeColor = System.Drawing.Color.Black;
-            this.res.HoverState.BorderColor = System.Drawing.Color.LightGray;
-            this.res.Location = new System.Drawing.Point(8, 20);
-            this.res.Multiline = true;
-            this.res.Name = "res";
-            this.res.PasswordChar = '\0';
-            this.res.PlaceholderText = "";
-            this.res.ReadOnly = true;
-            this.res.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.res.SelectedText = "";
-            this.res.Size = new System.Drawing.Size(241, 223);
-            this.res.TabIndex = 6;
-            this.res.WordWrap = false;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // US_Hashing
             // 
