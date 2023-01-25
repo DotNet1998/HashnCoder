@@ -245,6 +245,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(241, 19);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Скопировать текст в буфер обмена";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Panel4
             // 
@@ -318,6 +319,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(241, 19);
             this.guna2Button2.TabIndex = 5;
             this.guna2Button2.Text = "Вставить текст из буфера обмена";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Panel3
             // 

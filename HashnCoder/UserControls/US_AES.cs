@@ -27,6 +27,7 @@ namespace HashnCoder.UserControls
         public US_AES()
         {
             InitializeComponent();
+           
         }
         public static Random rnd = new Random((int)DateTime.Now.Ticks); // Боссовский рандом
         private void guna2Button4_Click(object sender, EventArgs e) //GENERATE KEY
@@ -113,5 +114,26 @@ namespace HashnCoder.UserControls
 
         }
 
+        private void guna2Button3_Click(object sender, EventArgs e) // скопировать
+        {
+            try
+            {
+                Clipboard.SetText(res.Text);
+            }
+            catch { MessageBox.Show("Поле пустое"); }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e) //вставить
+        {
+            try
+            {
+                if (Clipboard.ContainsText() == true)
+                {
+                    string someText = Clipboard.GetText();
+                    vvod.Text += someText;
+                }
+            }
+            catch { MessageBox.Show("Буфер обмена пуст"); }
+        }
     }
 }
