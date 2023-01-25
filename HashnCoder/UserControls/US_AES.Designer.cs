@@ -30,26 +30,26 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.vvodKey = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.algoritm = new System.Windows.Forms.ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.res = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.vvod = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.sizeKey = new System.Windows.Forms.ComboBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.encdecode = new System.Windows.Forms.ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
@@ -66,7 +66,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.guna2Button4);
-            this.guna2Panel1.Controls.Add(this.guna2TextBox3);
+            this.guna2Panel1.Controls.Add(this.vvodKey);
             this.guna2Panel1.Controls.Add(this.guna2Panel8);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
@@ -95,28 +95,29 @@
             this.guna2Button4.Size = new System.Drawing.Size(245, 14);
             this.guna2Button4.TabIndex = 9;
             this.guna2Button4.Text = "GENERATE KEY";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2TextBox3
+            // vvodKey
             // 
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "Введите ключ";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 7F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox3.Location = new System.Drawing.Point(288, 37);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2TextBox3.Multiline = true;
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(243, 30);
-            this.guna2TextBox3.TabIndex = 8;
+            this.vvodKey.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.vvodKey.DefaultText = "Введите ключ";
+            this.vvodKey.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.vvodKey.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.vvodKey.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.vvodKey.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.vvodKey.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.vvodKey.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.vvodKey.ForeColor = System.Drawing.Color.Black;
+            this.vvodKey.HoverState.BorderColor = System.Drawing.Color.LightGray;
+            this.vvodKey.Location = new System.Drawing.Point(288, 37);
+            this.vvodKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.vvodKey.Multiline = true;
+            this.vvodKey.Name = "vvodKey";
+            this.vvodKey.PasswordChar = '\0';
+            this.vvodKey.PlaceholderText = "";
+            this.vvodKey.SelectedText = "";
+            this.vvodKey.Size = new System.Drawing.Size(243, 30);
+            this.vvodKey.TabIndex = 8;
             // 
             // guna2Panel8
             // 
@@ -169,13 +170,14 @@
             this.guna2Button1.Size = new System.Drawing.Size(30, 72);
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "Encode";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Panel5
             // 
             this.guna2Panel5.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel5.BorderThickness = 1;
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel4);
-            this.guna2Panel5.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel5.Controls.Add(this.res);
             this.guna2Panel5.Controls.Add(this.guna2Panel7);
             this.guna2Panel5.Location = new System.Drawing.Point(274, 85);
             this.guna2Panel5.Name = "guna2Panel5";
@@ -194,27 +196,27 @@
             this.guna2HtmlLabel4.TabIndex = 7;
             this.guna2HtmlLabel4.Text = "Результат: ";
             // 
-            // guna2TextBox2
+            // res
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox2.Location = new System.Drawing.Point(8, 20);
-            this.guna2TextBox2.Multiline = true;
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(241, 182);
-            this.guna2TextBox2.TabIndex = 6;
+            this.res.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.res.DefaultText = "";
+            this.res.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.res.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.res.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.res.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.res.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.res.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.res.ForeColor = System.Drawing.Color.Black;
+            this.res.HoverState.BorderColor = System.Drawing.Color.LightGray;
+            this.res.Location = new System.Drawing.Point(8, 20);
+            this.res.Multiline = true;
+            this.res.Name = "res";
+            this.res.PasswordChar = '\0';
+            this.res.PlaceholderText = "";
+            this.res.ReadOnly = true;
+            this.res.SelectedText = "";
+            this.res.Size = new System.Drawing.Size(241, 182);
+            this.res.TabIndex = 6;
             // 
             // guna2Panel7
             // 
@@ -242,14 +244,14 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(241, 19);
             this.guna2Button3.TabIndex = 5;
-            this.guna2Button3.Text = "Скопировать текст из буфера обмена";
+            this.guna2Button3.Text = "Скопировать текст в буфер обмена";
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel4.BorderThickness = 1;
             this.guna2Panel4.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel4.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel4.Controls.Add(this.vvod);
             this.guna2Panel4.Controls.Add(this.guna2Panel6);
             this.guna2Panel4.Location = new System.Drawing.Point(7, 85);
             this.guna2Panel4.Name = "guna2Panel4";
@@ -268,26 +270,26 @@
             this.guna2HtmlLabel3.TabIndex = 6;
             this.guna2HtmlLabel3.Text = "Введите текст:";
             // 
-            // guna2TextBox1
+            // vvod
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox1.Location = new System.Drawing.Point(8, 20);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(241, 182);
-            this.guna2TextBox1.TabIndex = 5;
+            this.vvod.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.vvod.DefaultText = "";
+            this.vvod.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.vvod.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.vvod.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.vvod.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.vvod.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.vvod.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.vvod.ForeColor = System.Drawing.Color.Black;
+            this.vvod.HoverState.BorderColor = System.Drawing.Color.LightGray;
+            this.vvod.Location = new System.Drawing.Point(8, 20);
+            this.vvod.Multiline = true;
+            this.vvod.Name = "vvod";
+            this.vvod.PasswordChar = '\0';
+            this.vvod.PlaceholderText = "";
+            this.vvod.SelectedText = "";
+            this.vvod.Size = new System.Drawing.Size(241, 182);
+            this.vvod.TabIndex = 5;
             // 
             // guna2Panel6
             // 
@@ -321,22 +323,22 @@
             // 
             this.guna2Panel3.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.comboBox2);
+            this.guna2Panel3.Controls.Add(this.sizeKey);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel3.Location = new System.Drawing.Point(6, 45);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(245, 31);
             this.guna2Panel3.TabIndex = 1;
             // 
-            // comboBox2
+            // sizeKey
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.sizeKey.FormattingEnabled = true;
+            this.sizeKey.Items.AddRange(new object[] {
             "128"});
-            this.comboBox2.Location = new System.Drawing.Point(153, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(87, 21);
-            this.comboBox2.TabIndex = 5;
+            this.sizeKey.Location = new System.Drawing.Point(153, 5);
+            this.sizeKey.Name = "sizeKey";
+            this.sizeKey.Size = new System.Drawing.Size(87, 21);
+            this.sizeKey.TabIndex = 5;
             // 
             // guna2HtmlLabel2
             // 
@@ -354,23 +356,23 @@
             // 
             this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.comboBox1);
+            this.guna2Panel2.Controls.Add(this.encdecode);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel2.Location = new System.Drawing.Point(6, 7);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(245, 32);
             this.guna2Panel2.TabIndex = 0;
             // 
-            // comboBox1
+            // encdecode
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.encdecode.FormattingEnabled = true;
+            this.encdecode.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.comboBox1.Location = new System.Drawing.Point(153, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 21);
-            this.comboBox1.TabIndex = 4;
+            this.encdecode.Location = new System.Drawing.Point(153, 6);
+            this.encdecode.Name = "encdecode";
+            this.encdecode.Size = new System.Drawing.Size(87, 21);
+            this.encdecode.TabIndex = 4;
             // 
             // guna2HtmlLabel1
             // 
@@ -410,21 +412,21 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox res;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox vvod;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox sizeKey;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox encdecode;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox vvodKey;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.ComboBox algoritm;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
