@@ -36,42 +36,79 @@ namespace HashnCoder.UserControls
 
         public string key()  // метод для генерирования ключа и передаю этот ключ в кнопку Encode
         {
-            byte[] key = new byte[16];
-            rnd.NextBytes(key);
-            vvodKey.Text = BitConverter.ToString(key).Replace("-", String.Empty).ToLower();
-            return key.ToString();
+            byte[] key = new byte[16]; // создаю масив байт с розмерм 128 бит 
+            rnd.NextBytes(key); // заполняю его рандомными битами 
+            vvodKey.Text = BitConverter.ToString(key).Replace("-", String.Empty).ToLower(); // вывожу в поле для ключа перевожу в стринг 
+            return key.ToString(); // возрощаю ключ в с стринг формате 
         }
 
-        public void guna2Button1_Click(object sender, EventArgs e) // Encode 
+        public void guna2Button1_Click(object sender, EventArgs e) // Encode  
         {
-            //Шифрую - Encode
-            if (encdecode.Text == "Encode" && sizeKey.Text == "128")
+            try
             {
-                string vkey = vvodKey.Text;
+                // AES - ECB
+                //Шифрую - Encode , алгоритм :  AES - ECB
+                if (encdecode.Text == "Encode" && sizeKey.Text == "128" && algoritm.Text == "AES-ECB")
+                {
+                    string vkey = vvodKey.Text;  // беру сгенерированый либо введённые ключ в с поля для пользвоателя 
 
-                var vodkey = Encoding.UTF8.GetBytes(vkey);//ключ 
+                    var vodkey = Encoding.UTF8.GetBytes(vkey);//ключ 
 
-                byte[] IV = new byte[16]; // юзаю такой же масив байт что и для ключа 
+                    byte[] IV = new byte[16]; // юзаю такой же масив байт что и для ключа 
 
 
-                string text = vvod.Text; // текст 
+                    string text = vvod.Text; // текст 
 
-                res.Text = Encypt.Encryptt(text, vodkey, IV);  // Подаю аршументы в метод класса Encrypt  (шифрую)
+                    res.Text = Encypt.EncryptECB(text, vodkey, IV);  // Подаю аршументы в метод класса Encrypt  (шифрую)
+                }
+                if (encdecode.Text == "Decode" && sizeKey.Text == "128" && algoritm.Text == "AES-ECB")
+                // Дешифрую - Decode  AES - ECB
+                {
+                    string vkey = vvodKey.Text;
+
+                    var vodkey = Encoding.UTF8.GetBytes(vkey);//ключ 
+
+                    byte[] IV = new byte[16]; // юзаю такой же масив байт что и для ключа 
+
+
+                    string text = vvod.Text; // текст 
+
+                    res.Text = Encypt.DecryptECB(text, vodkey, IV);  // Подаю аршументы в метод класса Encrypt  (дешифрую)
+                }
+
+
+                // AES - CBC
+                //Шифрую - Encode , алгоритм :  AES - CBC
+
+                if (encdecode.Text == "Encode" && sizeKey.Text == "128" && algoritm.Text == "AES-CBC")
+                {
+                    string vkey = vvodKey.Text;  // беру сгенерированый либо введённые ключ в с поля для пользвоателя 
+
+                    var vodkey = Encoding.UTF8.GetBytes(vkey);//ключ 
+
+                    byte[] IV = new byte[16]; // юзаю такой же масив байт что и для ключа 
+
+
+                    string text = vvod.Text; // текст 
+
+                    res.Text = Encypt.EncryptCBC(text, vodkey, IV);  // Подаю аршументы в метод класса Encrypt  (шифрую)
+                }
+                if (encdecode.Text == "Decode" && sizeKey.Text == "128" && algoritm.Text == "AES-CBC")
+                // Дешифрую - Decode  AES - ECB
+                {
+                    string vkey = vvodKey.Text;
+
+                    var vodkey = Encoding.UTF8.GetBytes(vkey);//ключ 
+
+                    byte[] IV = new byte[16]; // юзаю такой же масив байт что и для ключа 
+
+
+                    string text = vvod.Text; // текст 
+
+                    res.Text = Encypt.DecryptCBC(text, vodkey, IV);  // Подаю аршументы в метод класса Encrypt  (дешифрую)
+                }
             }
-            if (encdecode.Text == "Decode" && sizeKey.Text == "128")
-            // Дешифрую - Decode 
-            {
-                string vkey = vvodKey.Text;
-
-                var vodkey = Encoding.UTF8.GetBytes(vkey);//ключ 
-
-                byte[] IV = new byte[16]; // юзаю такой же масив байт что и для ключа 
-
-
-                string text = vvod.Text; // текст 
-
-                res.Text = Encypt.Decrypt(text, vodkey, IV);  // Подаю аршументы в метод класса Encrypt  (дешифрую)
-            }
+             catch { };
 
 
         }
