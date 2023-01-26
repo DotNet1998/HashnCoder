@@ -196,6 +196,7 @@
             this.vvod.Name = "vvod";
             this.vvod.PasswordChar = '\0';
             this.vvod.PlaceholderText = "";
+            this.vvod.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.vvod.SelectedText = "";
             this.vvod.Size = new System.Drawing.Size(241, 223);
             this.vvod.TabIndex = 5;

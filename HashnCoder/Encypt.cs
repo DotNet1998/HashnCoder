@@ -19,6 +19,7 @@ using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Crypto.Modes;
 using Org.BouncyCastle.Crypto.Paddings;
 using Org.BouncyCastle.Ocsp;
+using System.ComponentModel.Design;
 
 namespace HashnCoder
 {
@@ -26,7 +27,7 @@ namespace HashnCoder
 
     {
         //Шифрую - Encrypt       //AES - ECB                                                                                              //AES- ECB
-        public static string EncryptECB(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.ECB, PaddingMode padding = PaddingMode.PKCS7)
+        public static string Encrypt(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.ECB, PaddingMode padding = PaddingMode.PKCS7)
         {
             try
             {
@@ -44,13 +45,13 @@ namespace HashnCoder
                     return Convert.ToBase64String(dest);
                 }
             }
-            catch { };
+            catch { return "Извените, произошла непредвиденная ошибка, перезапустите программу"; };
         }
 
 
 
         // Дешифрую - Decrypt        //AES - ECB                                                                                        //AES- ECB
-        public static string DecryptECB(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.ECB, PaddingMode padding = PaddingMode.PKCS7)
+        public static string Decrypt(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.ECB, PaddingMode padding = PaddingMode.PKCS7)
         {
             try
             {
@@ -65,60 +66,15 @@ namespace HashnCoder
                 {
                     byte[] dest = decrypt.TransformFinalBlock(src, 0, src.Length);
                     decrypt.Dispose();
-                    return Encoding.UTF8.GetString(dest); //Padding is invalid and cannot be removed. 
+                    return Encoding.UTF8.GetString(dest); //Заполнение недействительно и не может быть удалено.
                 }
             }
-            catch { };
+            catch { return "Извените, произошла непредвиденная ошибка, перезапустите программу"; };
 
         }
 
 
-        //Шифрую - Encrypt      //AES- CBC                                                                                            //AES- CBC
-        public static string EncryptCBC(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.CBC, PaddingMode padding = PaddingMode.PKCS7)
-        {
-            try
-            {
-                AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
-                aes.BlockSize = blocksize;
-                aes.KeySize = keysize;
-                aes.Mode = cipher;
-                aes.Padding = padding;
-
-                byte[] src = Encoding.UTF8.GetBytes(text);
-                using (ICryptoTransform encrypt = aes.CreateEncryptor(key, iv))
-                {
-                    byte[] dest = encrypt.TransformFinalBlock(src, 0, src.Length);
-                    encrypt.Dispose();
-                    return Convert.ToBase64String(dest);
-                }
-            }
-
-            catch { };
-        }
-
-        // Дешифрую - Decrypt           //AES- CBC                                                                                     //AES- CBC
-        public static string DecryptCBC(string text, byte[] key, byte[] iv, int keysize = 128, int blocksize = 128, CipherMode cipher = CipherMode.CBC, PaddingMode padding = PaddingMode.PKCS7)
-        {
-            try
-            {
-                AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
-                aes.BlockSize = blocksize;
-                aes.KeySize = keysize;
-                aes.Mode = cipher;
-                aes.Padding = padding;
-
-                byte[] src = Convert.FromBase64String(text);
-                using (ICryptoTransform decrypt = aes.CreateDecryptor(key, iv))
-                {
-                    byte[] dest = decrypt.TransformFinalBlock(src, 0, src.Length);
-                    decrypt.Dispose();
-                    return Encoding.UTF8.GetString(dest); //Padding is invalid and cannot be removed. 
-                }
-            }
-
-            catch { };
-
-        }
+      
 
     }
 }

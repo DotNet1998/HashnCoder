@@ -17,17 +17,21 @@ namespace HashnCoder.UserControls
         public US_Encoding()
         {
             InitializeComponent();
-            algoritm.Text = "HtmlEncode";
-            encdecode.Text = "Encode";
-            vvod.Text = "\"Привет\"";
+            algoritm.DropDownStyle = ComboBoxStyle.DropDownList; // запрет на изменения текста вручную в комбо-боксе
+            algoritm.Text = "HtmlEncode"; //выбор действия комбобокса по умолчанию
+           
+            encdecode.DropDownStyle = ComboBoxStyle.DropDownList; // запрет на изменения текста вручную в комбо-боксе
+            encdecode.Text = "Encode";  //выбор действия комбобокса по умолчанию
+
+            vvod.Text = "\"Привет\""; // текст по умолчанию
         
         }
 
-        private void encodeGo_Click(object sender, EventArgs e)
+        private void encodeGo_Click(object sender, EventArgs e) //Encode 
         {
             try
             {
-               
+                res.ScrollBars = ScrollBars.Vertical; ; //добавляю перемотку текста вниз вверх.
                 //Base64
                 if (algoritm.Text == "Base64" && encdecode.Text == "Encode")    // кодирую текст  в Base64
                 {

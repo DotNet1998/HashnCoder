@@ -100,7 +100,7 @@
             // vvodKey
             // 
             this.vvodKey.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.vvodKey.DefaultText = "Введите ключ";
+            this.vvodKey.DefaultText = "";
             this.vvodKey.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.vvodKey.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.vvodKey.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -118,6 +118,7 @@
             this.vvodKey.SelectedText = "";
             this.vvodKey.Size = new System.Drawing.Size(243, 30);
             this.vvodKey.TabIndex = 8;
+            this.vvodKey.MouseClick += new System.Windows.Forms.MouseEventHandler(this.vvodKey_MouseClick);
             // 
             // guna2Panel8
             // 
@@ -164,9 +165,10 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 6F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Location = new System.Drawing.Point(254, 5);
             this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Color = System.Drawing.Color.IndianRed;
             this.guna2Button1.Size = new System.Drawing.Size(30, 72);
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "Encode";
@@ -288,6 +290,7 @@
             this.vvod.Name = "vvod";
             this.vvod.PasswordChar = '\0';
             this.vvod.PlaceholderText = "";
+            this.vvod.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.vvod.SelectedText = "";
             this.vvod.Size = new System.Drawing.Size(241, 182);
             this.vvod.TabIndex = 5;
@@ -367,6 +370,7 @@
             // 
             // encdecode
             // 
+            this.encdecode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.encdecode.FormattingEnabled = true;
             this.encdecode.Items.AddRange(new object[] {
             "Encode",
