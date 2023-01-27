@@ -1,26 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 using System.Security.Cryptography;
-
-using Org.BouncyCastle.OpenSsl;
-using Org.BouncyCastle.Crypto;
-using Org.BouncyCastle.Security;
-using Org.BouncyCastle.Crypto.Parameters;
-using System.Net.Sockets;
-using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Paddings;
-using Org.BouncyCastle.Crypto.Generators;
-using System.Web.UI.WebControls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using ScrollBars = System.Windows.Forms.ScrollBars;
 
 namespace HashnCoder.UserControls
